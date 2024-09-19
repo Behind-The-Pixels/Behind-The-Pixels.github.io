@@ -3,6 +3,7 @@
     <head>
         <title>TOI Drunk Detection</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
         <section>
@@ -10,7 +11,24 @@
             <img src="images/moon.png" id="moon">
             <img src="images/mountain.png" id="mountain">
             <img src="images/road.png" id="road">
-            <h2 id="text">Moon Light</h2>
+            <h2 id="text">Test</h2>
         </section>
+        <script type="text/javascript">
+            let bg = document.getElementById("bg");
+            let moon = document.getElementById("moon");
+            let mountain = document.getElementById("mountain");
+            let road = document.getElementById("road");
+            let text = document.getElementById("text");
+
+            window.addEventListener('scroll', function() {
+                var value = window.scrollY;
+                
+                bg.style.top = 0.5*value + 'px';
+                moon.style.top = 0.4*value + 'px';
+                mountain.style.top = 0.3*value + 'px';
+                road.style.top = 0.2*value + 'px';
+                text.style.top = 0.1*value + 'px';
+            })
+        </script>
     </body>
 </html>
