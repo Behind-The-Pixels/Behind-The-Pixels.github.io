@@ -1,0 +1,148 @@
+:root {
+    --color-primary: #dd9dff;
+    --color-primary-dark: #3e006d;
+    --heading-font: tahoma, sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    
+    background-color: black;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-weight:bold;
+    font-size: 10ex;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    font-weight:bold;
+    font-size: 4ex;
+}
+
+h3 {
+    font-family: var(--heading-font);
+    font-weight:bold;
+    font-size: 3ex;
+}
+
+button {
+    margin-top: 1ex;
+    padding: 0.7rem;
+    border: var(--color-primary) solid 0.14rem;
+    background: none;
+
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-primary);
+    color: black;
+}
+
+/* HERO */
+
+#hero {
+    width: 100%;
+    height: 70ex;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
+    display: grid;
+}
+
+#hero img {
+    margin-top: -20ex;
+    width: 120%;
+    overflow: hidden;
+    z-index: -1;
+    filter: brightness(50%) blur(3px);
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#hero #content {
+    margin-left: 10ex;
+    margin-right: 10ex;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#hero #text-wrapper {
+    margin-top: 20ex;
+    text-align: center;
+}
+
+#hero h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight:bold;
+    color: white;
+}
+
+#hero h3 {
+    margin: 0.5ex 16ex;
+    color: var(--color-primary);
+}
+
+/* ABOUT */
+
+#about {
+    height: 50ex;
+    padding: 3ex;
+    display: grid;
+    overflow: hidden;
+    align-items: center;
+}
+
+#about #bg {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    z-index: 0;
+    width: 120%;
+    margin-left: auto;
+    margin-right: auto;
+    filter: brightness(30%) blur(5px);
+    overflow: hidden;
+}
+
+#about #content {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    align-items: center;
+    z-index: 1;
+}
+
+#about #text {
+    width: 80%;
+    margin-left: auto;
+    margin-right: 1ex;
+    grid-column: 1;
+    grid-row: 1;
+    color: white;
+}
+
+#about h2 {
+    color: var(--color-primary);
+}
+
+#about #image {
+    width: 75%;
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 1ex;
+    border-radius: 5ex;
+}

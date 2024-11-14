@@ -1,43 +1,63 @@
-<!doctype HTML>
-<html>
-    <head>
-        <title>TOI Drunk Detection</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Classification</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Load jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <!--  Poppins Font  -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <section>
-            <img src="images/bg.jpg" id="bg">
-            <img src="images/moon.png" id="moon">
-            <img src="images/mountain.png" id="mountain">
-            <img src="images/road.png" id="road">
-            <h2 id="title">TOI</h2>
-            <h2 id="subtitle">Drunk Detection</h2>
-        </section>
-        <script type="text/javascript">
-            let bg = document.getElementById("bg");
-            let moon = document.getElementById("moon");
-            let mountain = document.getElementById("mountain");
-            let road = document.getElementById("road");
-            let title = document.getElementById("title");
-            let subtitle = document.getElementById("subtitle");
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-            window.addEventListener('scroll', function() {
-                var value = window.scrollY;
-                
-                bg.style.top = 0.4*value + 'px';
-                moon.style.top = 0.3*value + 'px';
-                mountain.style.top = 0.15*value + 'px';
-                road.style.top = 0.1*value + 'px';
-                title.style.top = 0.005*value + 'em';
-                subtitle.style.top = 0.004*value + 'em';
-            })
-        </script>
-    </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Placeholder for the navigation bar -->
+<div id="nav-placeholder"></div>
+
+<div id="hero">
+    <div id="content">
+        <div id="text-wrapper">
+            <h1>CANCER CLASSIFICATION</h1>
+            <h3>Novel Enhancements in Convolutional Neural Network (CNN) Cancer Detection: Testing Different Image Processing Techniques</h3>
+            <button>LEARN MORE</button>
+        </div>
+    </div>
+    <img src="images/hero_bg.avif">
+</div>
+
+<div id="about">
+    <div id="content">
+        <div id="text">
+            <h2>ABOUT US</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, hic dolorem suscipit cumque omnis animi possimus ratione temporibus quae molestiae eum cum ipsam autem et earum in magni quaerat maiores!</p>    
+            <button>LEARN MORE</button>
+        </div>
+        <img id="image" src="images/about_image.avif">
+    </div>
+    <img id="bg" src="images/about_bg.avif">
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  // Using jQuery to load the navigation bar from navigation.html
+  $.get("navigation_bar.html", function(data) {
+      $("#nav-placeholder").replaceWith(data);
+  });
+
+  $.get("footer.html", function(data) {
+      $("#footer-placeholder").replaceWith(data);
+  });
+</script>
+
+</body>
 </html>
