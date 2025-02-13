@@ -74,8 +74,8 @@ button:hover {
 }
 
 #hero #content {
-    margin-left: 10ex;
-    margin-right: 10ex;
+    margin-left: 5ex;
+    margin-right: 5ex;
     grid-column: 1;
     grid-row: 1;
 }
